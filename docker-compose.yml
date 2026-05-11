@@ -1,6 +1,6 @@
 services:
   frontend:
-    build: .
+    image: tdwot1004/innovatech-frontend:latest
     container_name: innovatech_frontend
     restart: always
     ports:
