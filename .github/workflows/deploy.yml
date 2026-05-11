@@ -41,6 +41,9 @@ jobs:
           username: ubuntu
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
+            sudo apt-get update -y
+            sudo apt-get install docker.io docker-compose -y
+            sudo systemctl start docker
             cd /home/ubuntu/frontend
             sudo docker-compose pull
             sudo docker-compose up -d
