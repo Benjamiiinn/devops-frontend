@@ -1,0 +1,7 @@
+services:
+  frontend:
+    build: .
+    container_name: innovatech_frontend
+    restart: always
+    ports:
+      - "80:80"
