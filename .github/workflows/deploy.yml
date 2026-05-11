@@ -24,6 +24,8 @@ jobs:
           context: .
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/innovatech-frontend:latest
+          build-args: |
+            VITE_API_URL=http://${{ secrets.EC2_HOST }}
 
       - name: 4. Copiar docker-compose al EC2 Público
         uses: appleboy/scp-action@v0.1.4
