@@ -45,5 +45,5 @@ jobs:
             sudo apt-get install docker.io docker-compose -y
             sudo systemctl start docker
             cd /home/ubuntu/frontend
-            sudo docker-compose pull
-            sudo docker-compose up -d
+            sudo docker compose pull
+            sudo docker compose up -d
