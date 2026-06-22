@@ -31,5 +31,7 @@ jobs:
           IMAGE_TAG: latest
         run: |
           docker build \
-            --build-arg VITE_API_URL=http://alb-innovatech-163553044.us-east-1.elb.amazonaws.com:3001 \
-            -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+          --build-arg VITE_API_URL=http://alb-innovatech-163553044.us-east-1.elb.amazonaws.com:3001 \
+          -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+
+          docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
