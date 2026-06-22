@@ -161,7 +161,7 @@ function App() {
   if (loading) {
     return <div className="loading">Cargando panel operativo...</div>;
   }
-
+  {/* Comentario de prueba */}
   return (
     <main className="page">
       <section className="hero">
